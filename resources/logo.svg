@@ -1,0 +1,30 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#gradient1)" stroke="#fff" stroke-width="4"/>
+  
+  <!-- Brain icon -->
+  <path d="M60 80 Q80 60 100 80 Q120 60 140 80 Q140 100 120 120 Q100 140 80 120 Q60 100 60 80" 
+        fill="#fff" opacity="0.9"/>
+  
+  <!-- Smaller brain details -->
+  <path d="M70 90 Q85 85 90 95 Q95 85 110 90 Q110 105 95 110 Q85 115 75 105 Q70 100 70 90" 
+        fill="#667eea" opacity="0.7"/>
+  
+  <!-- Mind/thought waves -->
+  <path d="M40 70 Q60 65 80 70" stroke="#a8edea" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M120 70 Q140 65 160 70" stroke="#a8edea" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M50 130 Q70 125 90 130" stroke="#a8edea" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M110 130 Q130 125 150 130" stroke="#a8edea" stroke-width="3" fill="none" opacity="0.8"/>
+  
+  <!-- Text -->
+  <text x="100" y="170" text-anchor="middle" font-family="Arial, sans-serif" 
+        font-size="18" font-weight="bold" fill="#2c3e50">GlobalMind</text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

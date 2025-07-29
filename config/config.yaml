@@ -1,0 +1,259 @@
+app:
+  name: "GlobalMind"
+  version: "1.0.0"
+  description: "Culturally-Adaptive Mental Health AI Support System"
+  debug: false
+  host: "localhost"
+  port: 8000
+
+# Language Configuration
+languages:
+  supported_languages:
+    - en  # English
+    - es  # Spanish
+    - fr  # French
+    - de  # German
+    - it  # Italian
+    - pt  # Portuguese
+    - ru  # Russian
+    - zh  # Chinese
+    - ja  # Japanese
+    - ko  # Korean
+    - ar  # Arabic
+    - hi  # Hindi
+    - th  # Thai
+    - vi  # Vietnamese
+    - id  # Indonesian
+    - ms  # Malay
+    - tl  # Filipino
+    - sw  # Swahili
+    - am  # Amharic
+    - yo  # Yoruba
+    - ig  # Igbo
+    - ha  # Hausa
+    - zu  # Zulu
+    - xh  # Xhosa
+    - af  # Afrikaans
+    - bn  # Bengali
+    - ta  # Tamil
+    - te  # Telugu
+    - ml  # Malayalam
+    - kn  # Kannada
+    - gu  # Gujarati
+    - pa  # Punjabi
+    - ur  # Urdu
+    - fa  # Persian
+    - he  # Hebrew
+    - tr  # Turkish
+    - pl  # Polish
+    - uk  # Ukrainian
+    - cs  # Czech
+    - hu  # Hungarian
+    - ro  # Romanian
+    - bg  # Bulgarian
+    - hr  # Croatian
+    - sr  # Serbian
+    - sk  # Slovak
+    - sl  # Slovenian
+    - et  # Estonian
+    - lv  # Latvian
+    - lt  # Lithuanian
+    - fi  # Finnish
+    - da  # Danish
+    - no  # Norwegian
+    - sv  # Swedish
+    - is  # Icelandic
+  
+  default_language: "en"
+  fallback_language: "en"
+  auto_detect: true
+
+# Cultural Adaptation
+cultural:
+  frameworks:
+    - western_cbt  # Cognitive Behavioral Therapy
+    - eastern_mindfulness  # Mindfulness-based approaches
+    - indigenous_healing  # Traditional healing practices
+    - family_systemic  # Family and community-based therapy
+    - religious_spiritual  # Faith-based counseling
+    - narrative_therapy  # Story-based approaches
+  
+  regional_adaptations:
+    western:
+      - individualistic_approach
+      - direct_communication
+      - goal_oriented
+    eastern:
+      - holistic_approach
+      - indirect_communication
+      - harmony_focused
+    african:
+      - community_centered
+      - oral_tradition
+      - ancestral_wisdom
+    latin:
+      - family_oriented
+      - emotional_expression
+      - cultural_pride
+
+# Security and Privacy
+security:
+  encryption:
+    algorithm: "AES-256-GCM"
+    key_rotation_days: 30
+  
+  privacy:
+    anonymize_data: true
+    data_retention_days: 365
+    gdpr_compliance: true
+    hipaa_compliance: true
+    delete_on_request: true
+  
+  authentication:
+    session_timeout: 3600  # 1 hour
+    max_sessions: 3
+    require_2fa: false
+
+# Database Configuration
+database:
+  type: "sqlite"
+  path: "data/globalmind.db"
+  backup_enabled: true
+  backup_interval: 86400  # 24 hours
+  
+  redis:
+    host: "localhost"
+    port: 6379
+    db: 0
+    password: null
+
+# AI Models Configuration
+models:
+  nlp:
+    translation_model: "Helsinki-NLP/opus-mt-en-mul"
+    sentiment_model: "cardiffnlp/twitter-roberta-base-sentiment-latest"
+    cultural_model: "custom-cultural-bert"
+    embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  
+  therapy:
+    cbt_model: "microsoft/DialoGPT-large"
+    mindfulness_model: "custom-mindfulness-gpt"
+    crisis_detection_model: "mental-health-crisis-bert"
+  
+  offline:
+    enabled: true
+    models_path: "models/offline/"
+    max_size_mb: 500
+
+# Performance Metrics
+performance:
+  translation_accuracy_threshold: 0.95
+  cultural_appropriateness_threshold: 0.90
+  user_satisfaction_threshold: 4.5
+  offline_availability_threshold: 0.99
+  response_time_threshold: 2.0  # seconds
+
+# Monitoring and Logging
+monitoring:
+  enabled: true
+  log_level: "INFO"
+  log_file: "logs/globalmind.log"
+  metrics_port: 9090
+  
+  alerts:
+    email_notifications: true
+    slack_webhook: null
+    performance_degradation: true
+    security_incidents: true
+
+# Emergency Protocols
+emergency:
+  crisis_keywords:
+    - "suicide"
+    - "self-harm"
+    - "kill myself"
+    - "end my life"
+    - "no reason to live"
+  
+  escalation:
+    enabled: true
+    hotline_numbers:
+      us: "988"
+      uk: "116 123"
+      ca: "1-833-456-4566"
+      au: "13 11 14"
+    
+  immediate_response:
+    priority_routing: true
+    human_handoff: true
+    emergency_contacts: true
+
+# UI/UX Configuration
+ui:
+  themes:
+    - light
+    - dark
+    - high_contrast
+    - culturally_adaptive
+  
+  accessibility:
+    screen_reader_support: true
+    keyboard_navigation: true
+    voice_commands: true
+    text_size_adjustment: true
+  
+  customization:
+    cultural_colors: true
+    language_fonts: true
+    layout_direction: "auto"  # LTR/RTL based on language
+
+# API Configuration
+api:
+  rate_limiting:
+    requests_per_minute: 100
+    burst_limit: 200
+  
+  cors:
+    enabled: true
+    origins:
+      - "http://localhost:3000"
+      - "https://globalmind.ai"
+  
+  endpoints:
+    health_check: "/health"
+    metrics: "/metrics"
+    chat: "/api/v1/chat"
+    translation: "/api/v1/translate"
+    cultural: "/api/v1/cultural"
+
+# SMS Configuration
+sms:
+  enabled: true
+  provider: "twilio"
+  account_sid: "your_twilio_account_sid"
+  auth_token: "your_twilio_auth_token"
+  from_number: "+1234567890"
+  fallback_mode: true
+  max_message_length: 160
+  rate_limiting:
+    messages_per_minute: 10
+    daily_limit: 100
+
+# Voice Processing Configuration
+voice:
+  enabled: true
+  speech_to_text:
+    provider: "google"
+    timeout: 30
+    confidence_threshold: 0.7
+  text_to_speech:
+    provider: "gtts"
+    voice_style: "calm"
+    speed: 0.95
+  supported_formats:
+    - "mp3"
+    - "wav"
+    - "m4a"
+  offline_mode:
+    enabled: false
+    model_path: "models/voice/"
